@@ -2,7 +2,7 @@ header.navigation {
   $base-border-color: $dark-blue !default;
   $base-border-radius: 3px !default;
   $action-color: $blue !default;
-  $navigation-padding: 0.25rem;
+  $navigation-padding: $base-spacing / 2;
   $navigation-background: $dark-blue;
   $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
@@ -172,11 +172,11 @@ header.navigation {
     padding-right: 0;
 
     a {
-      padding-right: 0.8em;
+      padding-right: $base-spacing;
     }
 
     > a {
-      padding-right: 1.6em;
+      padding-right: $base-spacing * 2;
       position: relative;
 
       @include media($horizontal-bar-mode) {
@@ -197,7 +197,7 @@ header.navigation {
     }
 
     @include media($horizontal-bar-mode) {
-      padding-right: 0.8em;
+      padding-right: $base-spacing;
       position: relative;
     }
   }
@@ -234,7 +234,7 @@ header.navigation {
         &:last-child > a {
           border-bottom-left-radius: $base-border-radius;
           border-bottom-right-radius: $base-border-radius;
-          padding-bottom: 0.7em;
+          padding-bottom: $base-spacing;
         }
       }
 
@@ -284,7 +284,6 @@ header.navigation {
       position: relative;
 
       input[type=search] {
-        @include box-sizing(border-box);
         background: $navigation-search-background;
         border-radius: $base-border-radius * 2;
         border: $navigation-search-border;
@@ -325,7 +324,6 @@ header.navigation {
       width: 16em;
 
       input {
-        @include box-sizing(border-box);
         display: block;
       }
     }
