@@ -1,0 +1,8 @@
+development:
+  adapter:  sqlite3
+  database: db/bc_bourbon_development.sqlite3
+
+test:
+  adapter:  sqlite3
+  database: db/bc_bourbon_test.sqlite3
+
