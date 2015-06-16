@@ -1,10 +1,8 @@
 #wrapper {
   @include outer-container;
-  .sidebar {
-    @include span-columns(2);
-  }
 
   .content {
     @include span-columns(10);
+    padding: $base-spacing;
   }
 }
