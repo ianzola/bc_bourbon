@@ -39,6 +39,7 @@ body {
  padding: 0;
  background-color: $body-bg;
  font-size: 18px;
+ font-family: $bodyFont;
 
  #main {
    @include outer-container;
