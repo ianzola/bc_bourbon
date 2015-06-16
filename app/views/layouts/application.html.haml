@@ -11,16 +11,17 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %header
-      = render 'layouts/navigation'
+    .wrapper-for-content-outside-of-footer
+      %header
+        = render 'layouts/navigation'
 
-    #wrapper
-      .sidebar
-        = render 'layouts/sidebar'
+      #wrapper
+        .sidebar
+          = render 'layouts/sidebar'
 
-      .content
-        = render 'layouts/messages'
-        = yield
+        .content
+          = render 'layouts/messages'
+          = yield
 
     %footer
       = render 'layouts/footer'
