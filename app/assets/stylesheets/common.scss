@@ -1,0 +1,51 @@
+$navFont: 'Open Sans', Verdana, Arial, sans-serif;
+$bodyFont: $navFont;
+
+$headFont: 'PT Serif', Georgia, serif;
+$buttonFont: 'Open Sans Condensed', 'PT Sans', Verdana, Arial, sans-serif;
+
+.nav-font { font-family: $navFont; }
+.head-font { font-family: $headFont; }
+.button-font { font-family: $buttonFont;  font-weight: 700;}
+
+$green:       #a1d642 ;
+$orange:      #faaa1b ;
+$turquoise:   #0e9f9a ;
+$pink:        #ec0088 ;
+$blue:        #006991 ;
+$dark-blue:   darken($blue, 15%);
+$red:         #ed1b24 ;
+$purple:      #8781bd ;
+$white:       white;
+
+$gray:        #6d6e71 ;
+$dark-gray:   darken($gray, 20%);
+$mid-gray:    lighten($gray, 40%);
+$light-gray:  lighten($gray, 52%);
+
+$warning:      lighten($orange, 10%);
+$warning-text: darken($orange, 10%);
+
+// Text colors
+$body-bg:     $light-gray;
+$text-blue: lighten(desaturate(adjust-hue($turquoise, 10%), 45%), 15%);
+$text-pink: lighten(desaturate(adjust-hue($pink, 10%), 12%), 17%);
+$text-purple: $purple;
+
+body {
+ margin: 0;
+ padding: 0;
+ background-color: $body-bg;
+ font-size: 18px;
+
+ #main {
+   @include outer-container;
+
+   #content {
+     @include span-columns(8);
+     @include shift(1);
+   }
+ }
+}
+
+$large-screen: em(860) !default;

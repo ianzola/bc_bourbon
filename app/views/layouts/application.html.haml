@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "Bc Bourbon"
+    %meta{:content => "#{content_for?(:description) ? yield(:description) : "Bc Bourbon"}", :name => "description"}/
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Open+Sans:400 italic,300 italic,600 italic|PT+Serif:400italic,400,700|Open+Sans|Open+Sans+Condensed:300,700'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'vendor/modernizr'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %header
+      = render 'layouts/navigation'
+
+    #wrapper
+      .sidebar
+        = render 'layouts/sidebar'
+
+      .content
+        = render 'layouts/messages'
+        = yield
+
+    %footer
+      = render 'layouts/footer'

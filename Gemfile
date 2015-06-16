@@ -7,15 +7,30 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+
+gem 'thin'
+gem 'haml-rails'
+
+gem 'simple_form'
+
+gem 'html2haml'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'guard-rails'
+  gem 'guard-livereload'
+  gem 'rb-fchange', :require=>false
+  gem 'rb-fsevent', :require=>false
+  gem 'rb-inotify', :require=>false
+  gem 'spring-commands-rspec'
 end
-gem 'foundation-rails'
-gem 'gibbon'
-gem 'high_voltage'
-gem 'simple_form'
+
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
