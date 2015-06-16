@@ -8,6 +8,8 @@ $buttonFont: 'Open Sans Condensed', 'PT Sans', Verdana, Arial, sans-serif;
 .head-font { font-family: $headFont; }
 .button-font { font-family: $buttonFont;  font-weight: 700;}
 
+$base-spacing: 0.5rem !default;
+
 $green:       #a1d642 ;
 $orange:      #faaa1b ;
 $turquoise:   #0e9f9a ;
