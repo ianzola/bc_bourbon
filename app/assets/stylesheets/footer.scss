@@ -1,37 +1,34 @@
-// Uncomment this for a sticky footer.
-//
-// .wrapper-for-content-outside-of-footer {
-//   min-height: 100%;
-//   height: auto !important;
-//   height: 100%;
-//   margin: 0 auto -4em;
-// }
+.wrapper-for-content-outside-of-footer {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
 
-// html, body {
-//  height: 100%;
-// }
+html, body {
+ height: 100%;
+}
 
-// .wrapper-for-content-outside-of-footer:after {
-//   content: "";
-//   display: block;
-// }
+.wrapper-for-content-outside-of-footer:after {
+  content: "";
+  display: block;
+}
 
-// .footer-2, .wrapper-for-content-outside-of-footer:after {
-//   height: 17em;
+.footer, .wrapper-for-content-outside-of-footer:after {
+  height: 17em;
 
-//   @include media($large-screen) {
-//     height: 4em;
-//   }
-// }
+  @include media($large-screen) {
+    height: 4em;
+  }
+}
 
 .footer {
-  $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
+  $action-color: red !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  $footer-background: desaturate(darken($action-color, 20%), 30%);
+  $footer-background: $dark-blue;
   $footer-color: white;
-  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-link-color: $footer-color;
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
@@ -67,9 +64,13 @@
   }
 
   ul li {
-    font-weight: 800;
+    font-family: $navFont;
+    text-transform: uppercase;
+    font-size: 70%;
     list-style: none;
     padding-right: 1em;
+    letter-spacing: 1px;
+    font-weight: bold;
 
     @include media($large-screen) {
       display: inline;
@@ -90,11 +91,6 @@
   .footer-secondary-links {
     @include media($large-screen) {
       float: right;
-    }
-
-    li {
-      font-size: 0.8em;
-      font-weight: 400;
     }
 
     ul.footer-social {
