@@ -1,14 +1,29 @@
-$navFont: 'Open Sans', Verdana, Arial, sans-serif;
-$bodyFont: $navFont;
+$nav-font: 'Open Sans', Verdana, Arial, sans-serif;
+$nav-font-size: 80%;
+$navigation-color: transparentize(white, 0.3);
+$navigation-color-hover: white;
 
-$headFont: 'PT Serif', Georgia, serif;
-$buttonFont: 'Open Sans Condensed', 'PT Sans', Verdana, Arial, sans-serif;
+@mixin nav-font {
+  font-family: $nav-font;
+  color: $navigation-color;
+  font-size: $nav-font-size;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-decoration: none;
 
-.nav-font { font-family: $navFont; }
-.head-font { font-family: $headFont; }
-.button-font { font-family: $buttonFont;  font-weight: 700;}
+  &:focus,
+  &:hover {
+    color: $navigation-color-hover;
+    cursor: pointer;
+  }
+}
 
-$base-spacing: 0.5rem !default;
+$body-font: $nav-font;
+$head-font: 'PT Serif', Georgia, serif;
+$button-font: 'Open Sans Condensed', 'PT Sans', Verdana, Arial, sans-serif;
+
+$base-spacing: 0.5em;
 
 $green:       #a1d642 ;
 $orange:      #faaa1b ;
@@ -39,7 +54,7 @@ body {
  padding: 0;
  background-color: $body-bg;
  font-size: 18px;
- font-family: $bodyFont;
+ font-family: $body-font;
 
  #main {
    @include outer-container;
