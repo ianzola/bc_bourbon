@@ -1,7 +1,7 @@
 $nav-font: 'Open Sans', Verdana, Arial, sans-serif;
 $nav-font-size: 80%;
-$navigation-color: transparentize(white, 0.3);
-$navigation-color-hover: white;
+$navigation-color: white;
+$navigation-color-hover: transparentize(white, 0.2);
 
 @mixin nav-font {
   font-family: $nav-font;
@@ -23,7 +23,7 @@ $body-font: $nav-font;
 $head-font: 'PT Serif', Georgia, serif;
 $button-font: 'Open Sans Condensed', 'PT Sans', Verdana, Arial, sans-serif;
 
-$base-spacing: 0.5em;
+$base-spacing: 1em;
 
 $green:       #a1d642 ;
 $orange:      #faaa1b ;
