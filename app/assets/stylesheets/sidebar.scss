@@ -1,11 +1,12 @@
 .sidebar {
   @include span-columns(2);
-  height: auto !important;
-  height: 100%;
-
   padding: $base-spacing;
   margin: 0 !important;
   background-color: $dark-gray;
   color: white;
-  display: flex;
+  
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+  overflow: hidden;
+
 }
