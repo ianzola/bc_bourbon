@@ -46,30 +46,19 @@ html, body {
       margin-left: 1em;
       margin-bottom: 0;
     }
-  }
+    
+    li {
+      list-style: none;
+      padding-right: 1em;
+      letter-spacing: 1px;
 
-  ul li {
-    font-family: $navFont;
-    text-transform: uppercase;
-    font-size: 70%;
-    list-style: none;
-    padding-right: 1em;
-    letter-spacing: 1px;
-    font-weight: bold;
-
-    @include media($large-screen) {
-      display: inline;
-      text-align: left;
-    }
-  }
-
-  ul li a {
-    color: $footer-link-color;
-    text-decoration: none;
-
-    &:focus,
-    &:hover {
-      color: transparentize($footer-color, 0);
+      @include media($large-screen) {
+        display: inline;
+        text-align: left;
+      }
+      a {
+        @include nav-font;
+      }
     }
   }
 
