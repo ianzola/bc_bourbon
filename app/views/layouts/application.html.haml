@@ -12,12 +12,10 @@
     = csrf_meta_tags
   %body
     .wrapper-for-content-outside-of-footer
-      %header
-        = render 'layouts/navigation'
+      = render 'layouts/navigation'
 
       #wrapper
         = render 'layouts/sidebar'
-
         .content
           = render 'layouts/messages'
           = yield
