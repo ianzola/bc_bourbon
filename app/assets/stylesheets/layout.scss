@@ -1,6 +1,6 @@
 #wrapper {
   @include outer-container;
-
+  margin-left: 0;
   .content {
     @include span-columns(10);
     padding: $base-spacing;
