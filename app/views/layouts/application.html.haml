@@ -16,12 +16,10 @@
         = render 'layouts/navigation'
 
       #wrapper
-        .sidebar
-          = render 'layouts/sidebar'
+        = render 'layouts/sidebar'
 
         .content
           = render 'layouts/messages'
           = yield
 
-    %footer
-      = render 'layouts/footer'
+    = render 'layouts/footer'
