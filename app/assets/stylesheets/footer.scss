@@ -1,8 +1,11 @@
+$footer-height: 3em;
+$footer-margin: -$footer-height;
+
 .wrapper-for-content-outside-of-footer {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -4em;
+  margin: 0 auto $footer-margin;
 }
 
 html, body {
@@ -18,37 +21,19 @@ html, body {
   height: 17em;
 
   @include media($large-screen) {
-    height: 4em;
+    height: $footer-height;
   }
 }
 
 .footer {
-  $action-color: red !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $footer-background: $dark-blue;
-  $footer-color: white;
-  $footer-link-color: $footer-color;
-  $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
-  padding: $base-spacing;
+  padding: $base-spacing / 2;
   width: 100%;
   display: inline-block;
-
-  .footer-logo {
-    margin-right: 1em;
-    margin-bottom: 1em;
-
-    @include media($large-screen) {
-      float: left;
-      margin-bottom: 0;
-    }
-  }
-
-  .footer-logo img {
-    height: 1.6em;
-  }
 
   ul {
     line-height: 1.5em;
